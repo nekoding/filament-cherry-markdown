@@ -7,7 +7,7 @@
             height: '500px',
         },
         forceAppend: true
-    })">
+    })" wire:ignore="true">
         <div id="cherry-editor"></div>
     </div>
 </x-forms::field-wrapper>
