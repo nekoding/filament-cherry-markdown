@@ -10,12 +10,7 @@ use Spatie\LaravelPackageTools\Package;
 class FilamentCherryMarkdownServiceProvider extends PluginServiceProvider
 {
 
-    protected static $packageName = "filament-cherry-markdown";
-
-    public function configurePackage(Package $package): void
-    {
-        $package->name(static::$packageName);
-    }
+    public static string $name = "filament-cherry-markdown";
 
     public function bootingPackage()
     {

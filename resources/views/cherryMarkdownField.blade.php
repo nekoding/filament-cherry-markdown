@@ -1,9 +1,13 @@
-<x-forms::field-wrapper>
-    <div>
-        <p x-data="" x-init="console.log('hello world')">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel nihil facilis dolore dolor necessitatibus sint
-            id! Quibusdam, perferendis aspernatur. Quasi voluptate mollitia fugiat architecto necessitatibus enim
-            deleniti perspiciatis voluptates recusandae?
-        </p>
+<x-forms::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()"
+    :hint-action="$getHintAction()" :hint-color="$getHintColor()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
+    <div x-data="" x-init="editor = new Cherry({
+        id: 'cherry-editor',
+        locale: 'en_US',
+        editor: {
+            height: '500px',
+        },
+        forceAppend: true
+    })">
+        <div id="cherry-editor"></div>
     </div>
 </x-forms::field-wrapper>
