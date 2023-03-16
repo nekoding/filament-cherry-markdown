@@ -1,0 +1,13 @@
+{
+  "name": "filament-cherry-markdown",
+  "scripts": {
+    "dev": "esbuild resources/js/plugin.js --bundle --sourcemap=inline --outfile=dist/plugin.js --watch",
+    "build": "esbuild resources/js/plugin.js --bundle --minify --outfile=dist/plugin.js"
+  },
+  "dependencies": {
+    "cherry-markdown": "^0.8.16"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.11"
+  }
+}
