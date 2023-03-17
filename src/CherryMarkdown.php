@@ -35,6 +35,8 @@ class CherryMarkdown extends Field implements HasFileAttachments
         'pdf',
         'word',
         'graph',
-        'settings'
+        'settings',
+        'panel',
+        'detail'
     ];
 }

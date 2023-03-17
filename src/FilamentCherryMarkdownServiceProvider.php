@@ -19,12 +19,13 @@ class FilamentCherryMarkdownServiceProvider extends PluginServiceProvider
         ], true);
 
         Filament::registerStyles([
-            // 'https://pro.fontawesome.com/releases/v5.15.4/css/all.css',
             'https://cdn.jsdelivr.net/npm/cherry-markdown/dist/cherry-markdown.min.css',
             'spatie-markdown-editor' => __DIR__ . '/../resources/css/plugin.css',
         ]);
+    }
 
-        // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'filament-cherry-markdown');
+    public function packageConfigured(Package $package): void
+    {
+        $package->hasConfigFile();
     }
 }
