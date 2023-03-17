@@ -1,6 +1,11 @@
 # Filament Cherry Markdown
+
+![Banner](https://banners.beyondco.de/Filament%20Cherry%20Markdown.png?theme=light&packageManager=composer+require&packageName=nekoding%2Ffilament-cherry-markdown&pattern=architect&style=style_1&description=Cherry+Markdown+editor+for+filamentphp&md=1&showWatermark=0&fontSize=100px&images=template)
+
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Implementation Cherry Markdown Editor for Filamentphp. Inspired from [https://github.com/spatie/filament-markdown-editor](https://github.com/spatie/filament-markdown-editor)
@@ -80,6 +85,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
