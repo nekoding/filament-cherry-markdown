@@ -8,6 +8,8 @@ return [
     'editor_config' => [
         'height'            => '500px',
         'default_model'     => 'edit&preview',
-        'locale'            => 'en_US'
+        'locale'            => 'en_US',
+        'math_engine'       => 'MathJax',
+        'math_engine_src'   => 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js'
     ]
 ];
