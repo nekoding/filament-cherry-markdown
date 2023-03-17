@@ -63,6 +63,18 @@
                     @if ($hasToolbarButton('settings')) 'settings', @endif
                 ]
             },
+            fileUpload: function(file, onSuccess, onError) {
+                $wire.upload(`componentFileAttachments.{{ $getStatePath() }}`, file, () => {
+                    $wire.getComponentFileAttachmentUrl('{{ $getStatePath() }}').then((url) => {
+                        if (!url) {
+                            return onError('File could not be uploaded');
+                        }
+                        onSuccess(url);
+        
+                        console.log(url)
+                    })
+                });
+            },
             locale: cherryEditorConfiguration.locale || 'zh_CN',
         });
         
