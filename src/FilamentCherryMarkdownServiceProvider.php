@@ -23,5 +23,8 @@ class FilamentCherryMarkdownServiceProvider extends PluginServiceProvider
             'https://cdn.jsdelivr.net/npm/cherry-markdown/dist/cherry-markdown.min.css',
             'spatie-markdown-editor' => __DIR__ . '/../resources/css/plugin.css',
         ]);
+
+        // Automatically apply the package configuration
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'filament-cherry-markdown');
     }
 }
