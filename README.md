@@ -1,6 +1,6 @@
 # Filament Cherry Markdown
 
-TODO
+Implementation Cherry Markdown Editor for Filamentphp. Inspired from [https://github.com/spatie/filament-markdown-editor](https://github.com/spatie/filament-markdown-editor)
 
 ## Installation
 
@@ -13,7 +13,19 @@ composer require nekoding/filament-cherry-markdown
 ## Usage
 
 ```php
-// TODO
+use Nekoding\FilamentCherryMarkdown\CherryMarkdown;
+
+public static function form(Form $form): Form
+{
+    return $form
+        ->schema([
+            // other fields ...
+            CherryMarkdown::make('detail')
+                ->fileAttachmentsDisk('public')
+                ->fileAttachmentsVisibility('public')
+                ->required(),
+        ]);
+}
 ```
 
 ### Testing
