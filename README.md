@@ -36,6 +36,10 @@ public static function form(Form $form): Form
 }
 ```
 
+### Screenshot
+![screenshot usage](https://user-images.githubusercontent.com/64598048/226078600-89e22d1c-e578-4e56-92d5-c2820c092cf2.png)
+
+
 ### Testing
 
 ```bash
