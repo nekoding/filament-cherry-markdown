@@ -16,7 +16,7 @@
     </script>
 
     <div x-data="{ state: $wire.{{ $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')') }} }" x-init="cherryEditor = new Cherry({
-        id: 'cherry-editor',
+        id: 'cherry-editor-{{ $getId() }}',
         value: state,
         editor: {
             height: cherryEditorConfiguration.height || '100%',
@@ -80,6 +80,6 @@
     cherryEditor.onChange(debounce((e) => {
         state = String(e.markdown)
     }))" wire:ignore>
-        <div id="cherry-editor"></div>
+        <div id="cherry-editor-{{ $getId() }}"></div>
     </div>
 </x-forms::field-wrapper>
