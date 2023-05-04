@@ -1,8 +1,8 @@
 <x-forms::field-wrapper :id="$getId()" :label="$getLabel()" :label-sr-only="$isLabelHidden()" :helper-text="$getHelperText()" :hint="$getHint()"
     :hint-action="$getHintAction()" :hint-color="$getHintColor()" :hint-icon="$getHintIcon()" :required="$isRequired()" :state-path="$getStatePath()">
 
-    <script>
-        function debounce(func, timeout = 300) {
+    
+    <div x-data="{  debounce(func, timeout = 300) {
             let timer;
             return (...args) => {
                 clearTimeout(timer);
@@ -10,13 +10,9 @@
                     func.apply(this, args);
                 }, timeout);
             };
-        }
-
-        let cherryEditorConfiguration = @json(config('filament-cherry-markdown.editor_config'));
-    </script>
-
-    <div x-data="{ state: $wire.{{ $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')') }} }" x-init="cherryEditor = new Cherry({
+        },cherryEditorConfiguration:@js(config('filament-cherry-markdown.editor_config')), state: $wire.{{ $applyStateBindingModifiers('entangle(\'' . $getStatePath() . '\')') }} }" x-init="cherryEditor = new Cherry({
         id: 'cherry-editor-{{ $getId() }}',
+        
         value: state,
         editor: {
             height: cherryEditorConfiguration.height || '100%',
@@ -34,6 +30,8 @@
             },
         },
         toolbars: {
+            bubble: @js($getBubbleButtons()) ,
+            float: @js($getFloatButtons()) ,
             toolbar: [
                 @if ($hasToolbarButton('bold')) 'bold', @endif
                 @if ($hasToolbarButton('italic')) 'italic', @endif
