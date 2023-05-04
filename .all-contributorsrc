@@ -14,6 +14,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "FDT2k",
+      "name": "Fabien Karsegård",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5261645?v=4",
+      "profile": "https://www.karsegard.ch",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
